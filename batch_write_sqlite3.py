@@ -36,7 +36,7 @@ with con:
 
   cur.execute("commit")
   # Make index
-  cur.execute("create index poplookup on pop (state, county);")
+  cur.execute("create index poplookup on pop (state, county, tract, block);")
 
 if con:
   con.close()
